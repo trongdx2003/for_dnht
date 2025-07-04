@@ -9,7 +9,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-CORRECT_TRAVEL_DATE = date(2024, 7, 17)
+CORRECT_TRAVEL_DATE = date(2024, 7, 16)
 
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
