@@ -9,7 +9,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-CORRECT_TRAVEL_DATE = date(2024, 7, 16)
+CORRECT_DATING_DATE = date(2021, 7, 23)
 
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
@@ -62,13 +62,13 @@ elif not st.session_state.authenticated:
     """)
 
     travel_date = st.date_input(
-        "📅 When did we travel to Hai Phong for the first time?",
+        "📅 When did we start dating?",
         min_value=date(2021, 1, 1),
         max_value=date(2025, 12, 31)
     )
 
     if st.button("Verify 🔐"):
-        if travel_date == CORRECT_TRAVEL_DATE:
+        if travel_date == CORRECT_DATING_DATE:
             st.success("✅ Verified successfully!")
             st.session_state.authenticated = True
             st.session_state.show_main = True
